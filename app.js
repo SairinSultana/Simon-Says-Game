@@ -21,16 +21,6 @@ document.addEventListener("keypress", function () {
   levelUp();// start the first level
 });
 
-// For mobile devices
-document.addEventListener("touchstart", function () {
-  if (!started) {
-    console.log("game is started! (touch)");
-    started = true;
-    levelUp();
-  }
-});
-
-
 // this function flashes the button for the game (white flash)
 function gameFlash(btn) {
   btn.classList.add("flash"); // add flash class (visually highlight it)
@@ -73,7 +63,7 @@ function checkAns(idx){
      if(userSeq[idx] === gameSeq[idx]){
         // if user has completed full sequence correctly
         if(userSeq.length == gameSeq.length){
-            setTimeout(levelUp, 250); // wait 0.25 sec then go to next level
+            setTimeout(levelUp, 1000); // wait 1 sec then go to next level
         }
      }
      else{
@@ -111,26 +101,10 @@ function btnPress(){
 
 // get all buttons and add click listeners to them
 
-let allBtns = document.querySelectorAll(".btn");
-
-for (let btn of allBtns) {
-  // Desktop click
-  btn.addEventListener("click", btnPress);
-
-  // Mobile touch
-  btn.addEventListener("touchstart", function () {
-    let color = btn.getAttribute("id"); // get the color like "red"
-    userSeq.push(color); // store what user pressed
-    userFlash(btn); // flash effect
-    checkAns(userSeq.length - 1); // check the user's answer
-  });
+let allBtns = document.querySelectorAll(".btn"); // select all 4 buttons
+for(btn of allBtns){
+    btn.addEventListener("click", btnPress); // call btnPress when user clicks any button
 }
-
-
-// let allBtns = document.querySelectorAll(".btn"); // select all 4 buttons
-// for(btn of allBtns){
-//     btn.addEventListener("click", btnPress); // call btnPress when user clicks any button
-// }
 
 
 

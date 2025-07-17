@@ -1,4 +1,4 @@
-/* body{
+body{
     text-align: center;
 }
 
@@ -48,99 +48,5 @@
   color: white;
   display: block;
   margin: 10px auto;
-} */
-
-
-body {
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f5f5f5;
 }
-
-/* Colored Buttons */
-.btn {
-  height: 200px;
-  width: 200px;
-  border-radius: 20%;
-  border: 10px solid black;
-  margin: 1rem;
-  box-sizing: border-box;
-  transition: transform 0.2s ease;
-}
-
-/* Flash effects */
-.flash {
-  background-color: white !important;
-}
-.userflash {
-  background-color: rgb(255, 41, 116) !important;
-}
-
-/* Restart Button */
-#restartBtn {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin-top: 20px;
-  cursor: pointer;
-  border: 2px solid white;
-  border-radius: 8px;
-  background-color: #000;
-  color: white;
-  display: block;
-  margin: 10px auto;
-}
-
-/* Grid Layout for Buttons */
-.box-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 450px;
-  margin: 0 auto;
-}
-
-.line-one,
-.line-two {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Color Classes */
-.red {
-  background-color: darkred;
-}
-.yellow {
-  background-color: yellow;
-}
-.green {
-  background-color: green;
-}
-.blue {
-  background-color: blue;
-}
-
-/* Responsive Design for smaller screens */
-@media (max-width: 768px) {
-  .btn {
-    width: 120px;
-    height: 120px;
-    margin: 0.5rem;
-  }
-  h1 {
-    font-size: 24px;
-  }
-  h3 {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-  #restartBtn {
-    font-size: 16px;
-    padding: 8px 16px;
-  }
-}
-
-
 
